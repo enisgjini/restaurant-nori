@@ -296,7 +296,7 @@ html {
 
 body {
     font-family: "Open Sans", sans-serif;
-    /* background: #eee; */
+    background: rgb(143, 143, 143);
 }
 
 img {
@@ -332,6 +332,9 @@ section {
 
 section p {
     padding-bottom: 20px;
+}
+.navbar{
+    height: 64px;
 }
 
 .navbar-brand {

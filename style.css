@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-body,
+/* body,
 div,
 h1,
 h2,
@@ -39,63 +39,48 @@ hgroup {
     margin: 0;
     padding: 0;
     border: 0;
-}
+} */
 
 a:active,
 a:hover {
     outline: 0;
 }
 
-@-webkit-viewport {
-    width: device-width;
+.photo-gallery {
+    color: #313437;
+    background-color: #fff;
 }
 
-@-moz-viewport {
-    width: device-width;
+.photo-gallery p {
+    color: #7d8285;
 }
 
-@-ms-viewport {
-    width: device-width;
+.photo-gallery h2 {
+    font-weight: bold;
+    margin-bottom: 40px;
+    padding-top: 40px;
+    color: inherit;
 }
 
-@-o-viewport {
-    width: device-width;
+@media (max-width:767px) {
+    .photo-gallery h2 {
+        margin-bottom: 25px;
+        padding-top: 25px;
+        font-size: 24px;
+    }
 }
 
-@viewport {
-    width: device-width;
+
+.photo-gallery .photos {
+    padding-bottom: 20px;
 }
 
-/* ------------------------------------------
-   RESPONSIVE NAV STYLES
- --------------------------------------------- */
-
-.nav-collapse ul {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    display: block;
-    list-style: none;
+.photo-gallery .item {
+    padding-bottom: 30px;
 }
 
-.nav-collapse li {
-    width: 100%;
-    display: block;
-}
 
-.js .nav-collapse {
-    clip: rect(0 0 0 0);
-    max-height: 0;
-    position: absolute;
-    display: block;
-    overflow: hidden;
-    zoom: 1;
-}
 
-.nav-collapse.opened {
-    max-height: 9999px;
-
-}
 
 .disable-pointer-events {
     pointer-events: none !important;
@@ -129,13 +114,7 @@ a:hover {
    FIXED HEADER
  --------------------------------------------- */
 
-header {
-    position: fixed;
-    z-index: 3;
-    width: 100%;
-    left: 0;
-    top: 0;
-}
+
 
 .logo {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -331,14 +310,14 @@ h2 {
 
 header {
     background: #fff;
-    border-bottom:1px solid black;
+    border-bottom: 1px solid black;
 }
 
 .container {
     max-width: 90%;
     margin: 0 auto;
     font-family: 'Poppins', sans-serif;
-    
+
 }
 
 .container-bottom {
@@ -355,9 +334,8 @@ section p {
     padding-bottom: 20px;
 }
 
-#menu>.row>h1 {
+.navbar-brand {
     text-align: center;
-    font-size: 36px;
     font-family: 'Courgette', cursive;
     font-weight: 500;
 }
@@ -375,7 +353,7 @@ section p {
     margin-bottom: 0.5em;
     background: left top no-repeat;
     background-size: cover;
-    border:1px solid black;
+    border: 1px solid black;
 }
 
 .page:nth-child(even) {
@@ -495,9 +473,9 @@ section p {
 }
 
 
-.page>img-pages{
+.page>img-pages {
     object-fit: fill;
-    width: 100px; 
+    width: 100px;
     height: 100%;
 }
 
@@ -519,58 +497,68 @@ section p {
     -moz-border-radius: 4rem;
     -ms-border-radius: 4rem;
     border-radius: 4rem;
-  }
-  .pn_testimonial_box:hover {
+}
+
+.pn_testimonial_box:hover {
     box-shadow: 2px 4px 8px #d6d8da;
     border: 1px solid #fff;
     transform: scale(1);
     position: relative;
     z-index: 1;
-  }
-  .pn_review_rating img {
+}
+
+.pn_review_rating img {
     width: 20%;
-  }
-  .pn_review_profile img {
+}
+
+.pn_review_profile img {
     position: absolute;
     margin: -1rem -5rem 0;
-  }
-  .pn_review_profile span {
+}
+
+.pn_review_profile span {
     position: absolute;
-  }
-  
-  
-  @media (max-width: 575px) {
-      /*---------- testimonial css start ----------*/
-      .pn_reviews {
-          padding: 3rem 0;
-      }
-      .pn_reviews h1 {
-          font-size: 2rem;
-          padding-bottom: 1rem !important;
-      }
-      .pn_testimonial_box {
-          padding: 2rem;
-          margin: 1rem;
-          border: 1px solid #405fbd;
-          position: relative;
-          -webkit-border-radius: 4rem;
-          -moz-border-radius: 4rem;
-          -ms-border-radius: 4rem;
-          border-radius: 4rem;
-      }
-      .pn_review_profile img {
-          position: absolute;
-          margin: -1.1rem -3rem 0;
-      }
-      .pn_review_profile span {
-          position: absolute;
-          padding: 1rem;
-      }
-      .pn_review_rating img {
-          width: auto;
-      }
-  }
-  
+}
+
+
+@media (max-width: 575px) {
+
+    /*---------- testimonial css start ----------*/
+    .pn_reviews {
+        padding: 3rem 0;
+    }
+
+    .pn_reviews h1 {
+        font-size: 2rem;
+        padding-bottom: 1rem !important;
+    }
+
+    .pn_testimonial_box {
+        padding: 2rem;
+        margin: 1rem;
+        border: 1px solid #405fbd;
+        position: relative;
+        -webkit-border-radius: 4rem;
+        -moz-border-radius: 4rem;
+        -ms-border-radius: 4rem;
+        border-radius: 4rem;
+    }
+
+    .pn_review_profile img {
+        position: absolute;
+        margin: -1.1rem -3rem 0;
+    }
+
+    .pn_review_profile span {
+        position: absolute;
+        padding: 1rem;
+    }
+
+    .pn_review_rating img {
+        width: auto;
+    }
+}
+
 
 /* Create two equal columns that floats next to each other */
 .column {
@@ -592,4 +580,22 @@ section p {
     .column {
         width: 100%;
     }
+}
+
+
+
+
+.form-box {
+    max-width: 500px;
+    margin: auto;
+    padding: 50px;
+    background: #ffffff;
+    border: 10px solid #f2f2f2;
+}
+
+
+
+input,
+textarea {
+    width: 100%;
 }

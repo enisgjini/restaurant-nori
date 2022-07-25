@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 
     <!-- Title of this webpage -->
     <title>Restaurant Nori</title>
@@ -20,10 +21,10 @@
             <a href="#home" class="logo">Restaurant Nori</a>
             <nav class="nav-collapse">
                 <ul>
-                    <li class="menu-item active"><a href="#home">Home</a></li>
-                    <li class="menu-item"><a href="#about">About</a></li>
-                    <li class="menu-item"><a href="#projects">Projects</a></li>
-                    <li class="menu-item"><a href="#blog">Blog</a></li>
+                    <li class="menu-item"><a href="#home">Ballina</a></li>
+                    <li class="menu-item"><a href="#menu">Menu</a></li>
+                    <li class="menu-item"><a href="#projects">Galleria</a></li>
+                    <li class="menu-item"><a href="#blog">Kontakti</a></li>
                 </ul>
             </nav>
         </div>
@@ -31,28 +32,40 @@
 
 
 
-    
-    <div class="container container-bottom">
-        <section>
-            <h2>Section One</h2>
-            
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae deleniti enim fuga numquam possimus
-                officia reprehenderit autem quam, natus temporibus molestias magnam laborum facilis, corporis ullam
-                iusto dignissimos beatae sapiente!</p>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore consequuntur autem, recusandae,
-                repellendus similique culpa necessitatibus provident! Eaque nobis, itaque aut, atque praesentium
-                corrupti aliquam pariatur quos debitis modi sunt!</p>
+    <div class="container container-bottom">
+        <section id="home">
+            <div class="row">
+                <div class="column" style="background-color:#aaa;">
+                    <h1>Our food site makes it easy to find local food</h1>
+                    <p>Imagine you don't need a diet because we provide healthy and delicious foo</p>
+                </div>
+                <div class="column" style="background-color:#bbb;">
+                    <h1>Our food site makes it easy to find local food</h1>
+                    <p>Imagine you don't need a diet because we provide healthy and delicious foo</p>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>Section Two</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus beatae inventore cupiditate itaque
-                vero voluptatum omnis ducimus laudantium accusantium quibusdam, asperiores architecto blanditiis esse
-                id, deserunt nulla earum dolorum ab.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea molestias saepe qui nemo consequuntur
-                impedit ullam rerum pariatur enim natus aperiam velit ab accusamus doloremque consequatur aliquam,
-                iusto, facere non!</p>
+        <section id="menu">
+            <div class="row">
+                <h1>Menu</h1>
+                <br>
+                <link href="https://fonts.googleapis.com/css?family=Lovers+Quarrel" rel="stylesheet">
+                <div class="book">
+                    <div id="pages" class="pages">
+                        <div class="page">
+                            <img src="assets/logo.jpg" alt="" class="img-pages">
+                        </div>
+                       
+                        <div class="page"><img src="assets/menu-1.jpg" alt=""></div>
+                        <div class="page"><img src="assets/menu-2.jpg" alt=""></div>
+                        <div class="page"><img src="assets/menu-3.jpg" alt=""></div>
+                        <div class="page"><img src="assets/menu-4.jpg" alt=""></div>
+                    </div>
+                </div>
+
+            </div>
         </section>
 
         <section>
@@ -75,6 +88,34 @@
                 nihil commodi odit illo quas.</p>
         </section>
     </div>
+
+    <script>
+        var pages = document.getElementsByClassName('page');
+        for (var i = 0; i < pages.length; i++) {
+            var page = pages[i];
+            if (i % 2 === 0) {
+                page.style.zIndex = (pages.length - i);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            for (var i = 0; i < pages.length; i++) {
+                //Or var page = pages[i];
+                pages[i].pageNum = i + 1;
+                pages[i].onclick = function () {
+                    if (this.pageNum % 2 === 0) {
+                        this.classList.remove('flipped');
+                        this.previousElementSibling.classList.remove('flipped');
+                    }
+                    else {
+                        this.classList.add('flipped');
+                        this.nextElementSibling.classList.add('flipped');
+                    }
+                }
+            }
+        })
+    </script>
+
 </body>
 
 </html>

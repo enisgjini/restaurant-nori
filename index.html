@@ -1,18 +1,92 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
+    <!-- Meta Tag's -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-    <!-- Title of this webpage -->
+    <!-- Title of Webpage -->
     <title>Restaurant Nori</title>
+
     <!-- Fav Icon -->
     <!-- <link rel="icon" type="image/jpg" href="assets/logo.jpg" /> -->
     <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#home">Ballina</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#menu">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#galleria">Galleria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#kontakti">Kontakti</a>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+
+    <!-- Title of this webpage -->
+<title>Restaurant Nori</title>
+<!-- Fav Icon -->
+<!-- <link rel="icon" type="image/jpg" href="assets/logo.jpg" /> -->
+<!-- External CSS -->
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 
 <body>
@@ -23,14 +97,12 @@
                 <ul>
                     <li class="menu-item"><a href="#home">Ballina</a></li>
                     <li class="menu-item"><a href="#menu">Menu</a></li>
-                    <li class="menu-item"><a href="#projects">Galleria</a></li>
-                    <li class="menu-item"><a href="#blog">Kontakti</a></li>
+                    <li class="menu-item"><a href="#galleria">Galleria</a></li>
+                    <li class="menu-item"><a href="#kontakti">Kontakti</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-
-
 
 
     <div class="container container-bottom">
@@ -57,7 +129,7 @@
                         <div class="page">
                             <img src="assets/logo.jpg" alt="" class="img-pages">
                         </div>
-                       
+
                         <div class="page"><img src="assets/menu-1.jpg" alt=""></div>
                         <div class="page"><img src="assets/menu-2.jpg" alt=""></div>
                         <div class="page"><img src="assets/menu-3.jpg" alt=""></div>
@@ -68,14 +140,76 @@
             </div>
         </section>
 
-        <section>
-            <h2>Section Three</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui commodi minus atque, numquam velit, cum
-                culpa voluptatum modi ab, eaque corporis! Ratione consequatur, omnis, odio quod nemo nobis eius?
-                Asperiores.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, molestiae velit sit quasi animi fugiat
-                eius vitae, fuga reprehenderit sequi iste tenetur nobis delectus ullam maiores deleniti accusamus
-                blanditiis natus.</p>
+        <section id="galleria">
+            <div class="row">
+                <section class="pn_reviews my-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h1 class="text-center pb-5">Reviews of our valuable clients</h1>
+                            </div>
+
+                            <div class="col-md-12 col-lg-4">
+                                <div class="pn_testimonial_box mt-4">
+                                    <p class="text-justify">What does Lorem Ipsum mean? Derived from Latin dolorem ipsum
+                                        (“pain itself”), Lorem Ipsum is filler text used by publishers and graphic
+                                        designers used to demonstrate graphic elements.
+                                    </p>
+
+                                    <div class="row pt-3">
+                                        <div class="col-md-6 pn_review_profile"><img
+                                                src="https://desklib.com/static/src/assets/images/v2/profile_1.svg"
+                                                class="border-radius-12 float-right" alt="client image" /> <span>
+                                                Charles Boyle </span> </div>
+                                        <div class="col-md-6 pn_review_rating d-flex justify-content-end"> 5 &nbsp; <img
+                                                class="image-radius aligncenter"
+                                                src="https://desklib.com/static/src/assets/images/v2/star_rating.svg"
+                                                alt="client stars image" /> </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-4">
+                                <div class="pn_testimonial_box mt-4">
+                                    <p class="text-justify">What does Lorem Ipsum mean? Derived from Latin dolorem ipsum
+                                        (“pain itself”), Lorem Ipsum is filler text used by publishers and graphic
+                                        designers used to demonstrate graphic elements.
+                                    </p>
+                                    <div class="row pt-3">
+                                        <div class="col-md-6 pn_review_profile"><img
+                                                src="https://desklib.com/static/src/assets/images/v2/profile_2.svg"
+                                                class="border-radius-12 float-right" alt="client image" /> <span> Gina
+                                                Lannety </span> </div>
+                                        <div class="col-md-6 pn_review_rating d-flex justify-content-end"> 5 &nbsp; <img
+                                                class="image-radius aligncenter"
+                                                src="https://desklib.com/static/src/assets/images/v2/star_rating.svg"
+                                                alt="client stars image" /> </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-4">
+                                <div class="pn_testimonial_box mt-4">
+                                    <p class="text-justify">What does Lorem Ipsum mean? Derived from Latin dolorem ipsum
+                                        (“pain itself”), Lorem Ipsum is filler text used by publishers and graphic
+                                        designers used to demonstrate graphic elements.
+                                    </p>
+                                    <div class="row pt-3">
+                                        <div class="col-md-6 pn_review_profile"><img
+                                                src="https://desklib.com/static/src/assets/images/v2/profile_3.svg"
+                                                class="border-radius-12 float-right" alt="client image" /> <span> Dug
+                                                Judey </span> </div>
+                                        <div class="col-md-6 pn_review_rating d-flex justify-content-end"> 5 &nbsp; <img
+                                                class="image-radius aligncenter"
+                                                src="https://desklib.com/static/src/assets/images/v2/star_rating.svg"
+                                                alt="stars image" /> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+            </div>
         </section>
 
         <section>
@@ -118,4 +252,4 @@
 
 </body>
 
-</html>
+</html> -->

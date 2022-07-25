@@ -290,7 +290,7 @@ a:hover {
 /* Demo style */
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 4rem;
+    scroll-padding-top: 6rem;
 
 }
 
@@ -584,18 +584,18 @@ section p {
 
 
 
-
-.form-box {
-    max-width: 500px;
-    margin: auto;
-    padding: 50px;
-    background: #ffffff;
-    border: 10px solid #f2f2f2;
+.modal button.close {
+  right: 0;
+  outline: 0;
+}
+  
+#gallery-lightbox img {
+  height: 350px;
+  object-fit: cover;
+  cursor: pointer;
 }
 
-
-
-input,
-textarea {
-    width: 100%;
+#gallery-lightbox img:hover {
+  opacity: 0.9;
+  transition: 0.5s ease-out;
 }

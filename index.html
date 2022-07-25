@@ -20,12 +20,15 @@
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <!-- Font Awesome CDN -->
     <script src="https://kit.fontawesome.com/a1927a49ea.js" crossorigin="anonymous"></script>
+    <!-- Fancybox  -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
 </head>
 
 <body>
     <!-- Navbar of page -->
     <header>
-        <nav class="navbar navbar-expand-lg bg-light fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
             <div class="container">
                 <a class="navbar-brand" href="#">Restaurant Nori</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -54,6 +57,10 @@
         </nav>
     </header>
 
+
+    <div class="container-fluid m-0 p-0">
+        <svg id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 380" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(243, 106, 62, 1)" offset="0%"></stop><stop stop-color="rgba(255, 179, 11, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,0L40,19C80,38,160,76,240,120.3C320,165,400,215,480,202.7C560,190,640,114,720,107.7C800,101,880,165,960,209C1040,253,1120,279,1200,291.3C1280,304,1360,304,1440,272.3C1520,241,1600,177,1680,152C1760,127,1840,139,1920,164.7C2000,190,2080,228,2160,221.7C2240,215,2320,165,2400,152C2480,139,2560,165,2640,202.7C2720,241,2800,291,2880,316.7C2960,342,3040,342,3120,310.3C3200,279,3280,215,3360,202.7C3440,190,3520,228,3600,234.3C3680,241,3760,215,3840,202.7C3920,190,4000,190,4080,158.3C4160,127,4240,63,4320,82.3C4400,101,4480,203,4560,259.7C4640,317,4720,329,4800,278.7C4880,228,4960,114,5040,88.7C5120,63,5200,127,5280,171C5360,215,5440,241,5520,209C5600,177,5680,89,5720,44.3L5760,0L5760,380L5720,380C5680,380,5600,380,5520,380C5440,380,5360,380,5280,380C5200,380,5120,380,5040,380C4960,380,4880,380,4800,380C4720,380,4640,380,4560,380C4480,380,4400,380,4320,380C4240,380,4160,380,4080,380C4000,380,3920,380,3840,380C3760,380,3680,380,3600,380C3520,380,3440,380,3360,380C3280,380,3200,380,3120,380C3040,380,2960,380,2880,380C2800,380,2720,380,2640,380C2560,380,2480,380,2400,380C2320,380,2240,380,2160,380C2080,380,2000,380,1920,380C1840,380,1760,380,1680,380C1600,380,1520,380,1440,380C1360,380,1280,380,1200,380C1120,380,1040,380,960,380C880,380,800,380,720,380C640,380,560,380,480,380C400,380,320,380,240,380C160,380,80,380,40,380L0,380Z"></path><defs><linearGradient id="sw-gradient-1" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(243, 106, 62, 1)" offset="0%"></stop><stop stop-color="rgba(255, 179, 11, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 50px); opacity:0.9" fill="url(#sw-gradient-1)" d="M0,38L40,88.7C80,139,160,241,240,259.7C320,279,400,215,480,190C560,165,640,177,720,202.7C800,228,880,266,960,234.3C1040,203,1120,101,1200,88.7C1280,76,1360,152,1440,177.3C1520,203,1600,177,1680,164.7C1760,152,1840,152,1920,152C2000,152,2080,152,2160,126.7C2240,101,2320,51,2400,31.7C2480,13,2560,25,2640,63.3C2720,101,2800,165,2880,202.7C2960,241,3040,253,3120,228C3200,203,3280,139,3360,152C3440,165,3520,253,3600,240.7C3680,228,3760,114,3840,101.3C3920,89,4000,177,4080,183.7C4160,190,4240,114,4320,107.7C4400,101,4480,165,4560,177.3C4640,190,4720,152,4800,158.3C4880,165,4960,215,5040,209C5120,203,5200,139,5280,101.3C5360,63,5440,51,5520,82.3C5600,114,5680,190,5720,228L5760,266L5760,380L5720,380C5680,380,5600,380,5520,380C5440,380,5360,380,5280,380C5200,380,5120,380,5040,380C4960,380,4880,380,4800,380C4720,380,4640,380,4560,380C4480,380,4400,380,4320,380C4240,380,4160,380,4080,380C4000,380,3920,380,3840,380C3760,380,3680,380,3600,380C3520,380,3440,380,3360,380C3280,380,3200,380,3120,380C3040,380,2960,380,2880,380C2800,380,2720,380,2640,380C2560,380,2480,380,2400,380C2320,380,2240,380,2160,380C2080,380,2000,380,1920,380C1840,380,1760,380,1680,380C1600,380,1520,380,1440,380C1360,380,1280,380,1200,380C1120,380,1040,380,960,380C880,380,800,380,720,380C640,380,560,380,480,380C400,380,320,380,240,380C160,380,80,380,40,380L0,380Z"></path><defs><linearGradient id="sw-gradient-2" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(243, 106, 62, 1)" offset="0%"></stop><stop stop-color="rgba(255, 179, 11, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 100px); opacity:0.8" fill="url(#sw-gradient-2)" d="M0,152L40,139.3C80,127,160,101,240,88.7C320,76,400,76,480,95C560,114,640,152,720,190C800,228,880,266,960,266C1040,266,1120,228,1200,196.3C1280,165,1360,139,1440,164.7C1520,190,1600,266,1680,272.3C1760,279,1840,215,1920,164.7C2000,114,2080,76,2160,101.3C2240,127,2320,215,2400,240.7C2480,266,2560,228,2640,221.7C2720,215,2800,241,2880,259.7C2960,279,3040,291,3120,297.7C3200,304,3280,304,3360,297.7C3440,291,3520,279,3600,253.3C3680,228,3760,190,3840,183.7C3920,177,4000,203,4080,183.7C4160,165,4240,101,4320,107.7C4400,114,4480,190,4560,183.7C4640,177,4720,89,4800,82.3C4880,76,4960,152,5040,158.3C5120,165,5200,101,5280,88.7C5360,76,5440,114,5520,152C5600,190,5680,228,5720,247L5760,266L5760,380L5720,380C5680,380,5600,380,5520,380C5440,380,5360,380,5280,380C5200,380,5120,380,5040,380C4960,380,4880,380,4800,380C4720,380,4640,380,4560,380C4480,380,4400,380,4320,380C4240,380,4160,380,4080,380C4000,380,3920,380,3840,380C3760,380,3680,380,3600,380C3520,380,3440,380,3360,380C3280,380,3200,380,3120,380C3040,380,2960,380,2880,380C2800,380,2720,380,2640,380C2560,380,2480,380,2400,380C2320,380,2240,380,2160,380C2080,380,2000,380,1920,380C1840,380,1760,380,1680,380C1600,380,1520,380,1440,380C1360,380,1280,380,1200,380C1120,380,1040,380,960,380C880,380,800,380,720,380C640,380,560,380,480,380C400,380,320,380,240,380C160,380,80,380,40,380L0,380Z"></path></svg>
+    </div>
     <div class="container">
         <!-- Section Home ~ Start -->
         <section id="home">
@@ -81,8 +88,10 @@
                     </h3>
                 </div>
             </div>
+
         </section>
         <!-- Section Home ~ End -->
+
 
         <!--Section Menu ~ Start -->
         <section id="menu">
@@ -109,61 +118,141 @@
 
         <!--Section Gallery ~ Start -->
         <section id="galleria">
-            <div class="container">
-                <div class="row">
-                    <h1 class="text-center">Galleria</h1>
-                    <hr>
-                    <div class="row photos">
-                        <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="assets/gallery-1.jpg"
-                                data-lightbox="photos"><img class="img-fluid" src="assets/gallery-1.jpg"></a>
+            <h1 class="text-center">Galleria</h1>
+            <hr>
+            <div id="gallery-lightbox" class="row" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <div class="col-6 col-md-4 col-lg-3 p-0">
+                    <img class="w-100" src="assets/gallery-1.jpg" alt="First slide" data-target="#carouselExample"
+                        data-slide-to="0">
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 p-0">
+                    <img class="w-100" src="assets/gallery-2.jpg" alt="First slide" data-target="#carouselExample"
+                        data-slide-to="1">
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 p-0">
+                    <img class="w-100" src="assets/gallery-3.jpg" alt="First slide" data-target="#carouselExample"
+                        data-slide-to="2">
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 p-0">
+                    <img class="w-100" src="assets/gallery-4.jpg" alt="First slide" data-target="#carouselExample"
+                        data-slide-to="3">
+                </div>
+            </div>
+
+            <div id="gallery-lightbox" class="row" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <div class="col-6 col-md-4 col-lg-3 p-0">
+                    <img class="w-100" src="assets/gallery-5.jpg" alt="First slide" data-target="#carouselExample"
+                        data-slide-to="0">
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 p-0">
+                    <img class="w-100" src="assets/gallery-6.jpg" alt="First slide" data-target="#carouselExample"
+                        data-slide-to="1">
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 p-0">
+                    <img class="w-100" src="assets/gallery-7.jpg" alt="First slide" data-target="#carouselExample"
+                        data-slide-to="2">
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 p-0">
+                    <img class="w-100" src="assets/one.jpg" alt="First slide" data-target="#carouselExample"
+                        data-slide-to="3">
+                </div>
+            </div>
+            <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content bg-transparent">
+                        <div class="modal-body p-0">
+                            <div id="carouselExample" class="carousel slide carousel-fade" data-bs-ride="false">
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100" src="assets/gallery-1.jpg" alt="First slide">
+
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100"
+                                        src="https://images.unsplash.com/photo-1546534505-d534e27ecb35?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+                                        alt="Second slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100"
+                                        src="https://images.unsplash.com/photo-1546111380-cfca9a43dd85?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+                                        alt="Third slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100"
+                                        src="https://images.unsplash.com/photo-1547288242-f3d375fc7b5f?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+                                        alt="Fourth slide">
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExample" role="button" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExample" role="button" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
                         </div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="assets/gallery-2.jpg"
-                                data-lightbox="photos"><img class="img-fluid" src="assets/gallery-2.jpg"></a>
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="assets/gallery-3.jpg"
-                                data-lightbox="photos"><img class="img-fluid" src="assets/gallery-3.jpg"></a>
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="assets/gallery-4.jpg"
-                                data-lightbox="photos"><img class="img-fluid" src="assets/gallery-4.jpg"></a>
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="assets/gallery-5.jpg"
-                                data-lightbox="photos"><img class="img-fluid" src="assets/gallery-5.jpg"></a>
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="assets/gallery-6.jpg"
-                                data-lightbox="photos"><img class="img-fluid" src="assets/gallery-6.jpg"></a>
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="assets/gallery-7.jpg"
-                                data-lightbox="photos"><img class="img-fluid" src="assets/gallery-7.jpg"></a>
-                        </div>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
+
+
+
         </section>
         <!--Section Gallery ~ End -->
 
 
         <!-- Section Kontakti ~ Start -->
         <section id="kontakti">
-            <div class="form-box">
-                <h1>Simple Contact Form</h1>
-                <p>Using <a href="https://getbootstrap.com">Bootstrap</a> and <a
-                        href="https://www.formbucket.com">FormBucket</a></p>
-                <form action="https://api.formbucket.com/f/c2K3QTQ" method="post">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input class="form-control" id="name" type="text" name="Name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input class="form-control" id="email" type="email" name="Email">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea class="form-control" id="message" name="Message"></textarea>
-                    </div>
-                    <input class="btn btn-primary" type="submit" value="Submit" />
+            <h1 class="text-center">Kontakti</h1>
+            <hr>
+            <div class="col-lg-12 col-md-12 ">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d384.890654172114!2d20.833735144583358!3d42.35129053850045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13539b3eaf1a63e5%3A0x288c1ad5faefb1f9!2sRestaurant%20Nori%20Suharek%C3%AB!5e1!3m2!1sen!2s!4v1658774552307!5m2!1sen!2s"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" class="rounded-2"></iframe>
             </div>
-            </form>
+            <br>
+            <div class="form-box">
+                <form action="https://formsubmit.co/egjini17@gmail.com" method="POST"
+                    class="row row-cols-md-auto g-5 align-items-center">
+                    <div class="col-md-4">
+                        <label for="inlineFormInputGroupUsername">Emri</label>
+                        <div class="input-group">
+                            <div class="input-group-text"><i class="fa-solid fa-user"></i></div>
+                            <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="">
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="inlineFormInputGroupEmail">Email</label>
+                        <div class="input-group">
+                            <div class="input-group-text"><i class="fa-solid fa-envelope"></i></div>
+                            <input type="text" class="form-control" id="inlineFormInputGroupEmail" placeholder="">
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="inlineFormInputGroupPhone">Nr. i telefonit</label>
+                        <div class="input-group">
+                            <div class="input-group-text"><i class="fa-solid fa-phone"></i></div>
+                            <input type="text" class="form-control" id="inlineFormInputGroupPhone" placeholder="">
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="col-md-12">
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                                style="height: 200px;width:100%; resize: none;"></textarea>
+                            <label for="floatingTextarea2">Mesazh</label>
+                        </div>
+                    </div>
+                    <div class="col-md-12 text-center">
+                        <button type="submit" class="btn btn-dark w-25">Submit</button>
+                    </div>
+                </form>
+            </div>
         </section>
         <!-- Section Kontakti ~ End -->
 
@@ -171,9 +260,9 @@
     <!-- Footer ~ Start -->
     <footer class="bg-dark text-center text-white">
         <!-- Grid container -->
-        <div class="container p-4 pb-0">
+        <div class="container">
             <!-- Section: Social media -->
-            <section class="mb-4">
+            <section class="mt-3 mb-3">
                 <!-- Facebook -->
                 <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
                         class="fab fa-facebook-f"></i></a>
@@ -218,7 +307,32 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+    <script>
+        var pages = document.getElementsByClassName('page');
+        for (var i = 0; i < pages.length; i++) {
+            var page = pages[i];
+            if (i % 2 === 0) {
+                page.style.zIndex = (pages.length - i);
+            }
+        }
 
+        document.addEventListener('DOMContentLoaded', function () {
+            for (var i = 0; i < pages.length; i++) {
+                //Or var page = pages[i];
+                pages[i].pageNum = i + 1;
+                pages[i].onclick = function () {
+                    if (this.pageNum % 2 === 0) {
+                        this.classList.remove('flipped');
+                        this.previousElementSibling.classList.remove('flipped');
+                    }
+                    else {
+                        this.classList.add('flipped');
+                        this.nextElementSibling.classList.add('flipped');
+                    }
+                }
+            }
+        })
+    </script>
 </body>
 
 </html>

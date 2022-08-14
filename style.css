@@ -291,8 +291,7 @@ a:hover {
 /* Demo style */
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 6rem;font-family: 'Inter', sans-serif;
-
+    scroll-padding-top: 6rem;
 
 }
 

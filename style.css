@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('http://fonts.cdnfonts.com/css/inter');
 
 /* body,
 div,
@@ -290,13 +291,13 @@ a:hover {
 /* Demo style */
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 6rem;
+    scroll-padding-top: 6rem;font-family: 'Inter', sans-serif;
+
 
 }
 
 body {
-    font-family: "Open Sans", sans-serif;
-    background: rgb(143, 143, 143);
+    /* background: rgb(143, 143, 143); */
 }
 
 img {

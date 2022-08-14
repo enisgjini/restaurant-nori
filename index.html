@@ -1,321 +1,275 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <!-- Meta Tag's -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Title of Webpage -->
     <title>Restaurant Nori</title>
 
     <!-- External CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
-    <!-- Bootstrap 5.2.0 CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- Tailwind Configuration -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: "#da373d",
+                    },
+                },
+            },
+        };
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+    <!-- FlowBite Unpkg -->
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.2/dist/flowbite.min.css" />
 
     <!-- Font Awesome CDN -->
     <script src="https://kit.fontawesome.com/a1927a49ea.js" crossorigin="anonymous"></script>
-    
+
     <!-- Fancybox  -->
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
     <script type="text/javascript" src="/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
 
+    <!-- Font Awesome Kit -->
+    <script src="https://kit.fontawesome.com/a1927a49ea.js" crossorigin="anonymous"></script>
+
+    <!-- Inter Font CDN -->
+    <link href="http://fonts.cdnfonts.com/css/inter" rel="stylesheet">
+
+    <script>
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
 </head>
 
-<body>
+<body class="dark:bg-gray-800">
     <!-- Navbar of page -->
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
-            <div class="container">
-                <a class="navbar-brand" href="#">Restaurant Nori</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+    <nav
+        class="bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+        <div class="container flex flex-wrap justify-between items-center mx-auto">
+            <a href="https://flowbite.com/" class="flex items-center">
+                <img src="https://flowbite.com/docs/images/logo.svg" alt="Flowbite Logo" />
+            </a>
+            <div class="flex md:order-2">
+                <button type="button"
+                    class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 shadow-md">
+                    <i class="fa-brands fa-facebook-f"></i>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#home">Ballina</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#menu">Menu</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#galleria">Galleria</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#kontakti">Kontakti</a>
-                        </li>
-                    </ul>
 
+                <button type="button"
+                    class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 shadow-md">
+                    <i class="fa-brands fa-instagram fa-lg"></i>
+                </button>
+                <button id="theme-toggle" type="button"
+                    class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 shadow-md">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                            fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <button data-collapse-toggle="navbar-sticky" type="button"
+                    class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-sticky" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+
+            </div>
+            <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                <ul
+                    class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <li>
+                        <a href="#ballina"
+                            class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
+                            aria-current="page">Ballina</a>
+                    </li>
+                    <li>
+                        <a href="#rresh-nesh"
+                            class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Rreth
+                            Nesh</a>
+                    </li>
+                    <li>
+                        <a href="#menu"
+                            class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Menu</a>
+                    </li>
+                    <li>
+                        <a href="#galleria"
+                            class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Galleria</a>
+                    </li>
+                    <li>
+                        <a href="#kontakti"
+                            class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Kontakti</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="relative bg-white -mt-1 ">
+        <img class="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-25 sm:opacity-100"
+            src="https://images.unsplash.com/photo-1601758003122-53c40e686a19" alt="Couple on a bed with a dog" />
+
+        <div class="hidden sm:block sm:inset-0 sm:absolute sm:bg-gradient-to-r sm:from-white sm:to-transparent">
+        </div>
+
+        <div class="relative max-w-screen-xl px-4 py-32 mx-auto lg:h-screen lg:items-center lg:flex">
+            <div class="max-w-xl text-center sm:text-left">
+                <h1 class="text-3xl font-extrabold sm:text-5xl">
+                    Let us find your
+                    <strong class="font-extrabold text-blue-700 sm:block">
+                        Forever Home.
+                    </strong>
+                </h1>
+
+                <p class="max-w-lg mt-4 sm:leading-relaxed sm:text-xl">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus
+                    numquam ea!
+                </p>
+
+                <div class="flex flex-wrap gap-4 mt-8 text-center">
+                    <a class="block w-full px-12 py-3 text-sm font-medium text-white rounded shadow bg-rose-600 sm:w-auto active:bg-rose-500 hover:bg-rose-700 focus:outline-none focus:ring"
+                        href="/get-started">
+                        Get Started
+                    </a>
+
+                    <a class="block w-full px-12 py-3 text-sm font-medium bg-white rounded shadow text-rose-600 sm:w-auto hover:text-rose-700 active:text-rose-500 focus:outline-none focus:ring"
+                        href="/about">
+                        Learn More
+                    </a>
                 </div>
             </div>
-        </nav>
-    </header>
+        </div>
+    </section>
+
 
     <div class="container">
-        <!-- Section Home ~ Start -->
-        <section id="home">
-            <div class="row">
-                <div class="col-sm-12 col-md-6">
-                    <h3>Pjata me mish dhe peshk me cilësi të lartë, sallata të shkëlqyera, bukë shtëpie,
-                        pasta dhe ëmbëlsira, si dhe një gamë e përzgjedhur e verërave dhe koktejeve
-                        sigurojnë kënaqësi kulinare.
-                    </h3>
-                </div>
-                <div class="col-sm-12 col-md-6 rounded-3 text-center">
-                    <img src="assets/nori.jpg" height="500px">
-                </div>
-            </div>
-
-        </section>
-        <!-- Section Home ~ End -->
-
-
         <!--Section Menu ~ Start -->
         <section id="menu">
             <div class="row">
                 <h1 class="text-center">Menu</h1>
-                <hr>
+                <hr />
                 <div class="col-md-12">
-                    <link href="https://fonts.googleapis.com/css?family=Lovers+Quarrel" rel="stylesheet">
+                    <link href="https://fonts.googleapis.com/css?family=Lovers+Quarrel" rel="stylesheet" />
                     <div class="book">
                         <div id="pages" class="pages">
                             <div class="page">
-                                <img src="assets/logo.jpg" alt="" class="img-pages">
+                                <img src="assets/logo.jpg" alt="" class="img-pages" />
                             </div>
-                            <div class="page"><img src="assets/menu-1.jpg" alt=""></div>
-                            <div class="page"><img src="assets/menu-2.jpg" alt=""></div>
-                            <div class="page"><img src="assets/menu-3.jpg" alt=""></div>
-                            <div class="page"><img src="assets/menu-4.jpg" alt=""></div>
+                            <div class="page"><img src="assets/menu-1.jpg" alt="" /></div>
+                            <div class="page"><img src="assets/menu-2.jpg" alt="" /></div>
+                            <div class="page"><img src="assets/menu-3.jpg" alt="" /></div>
+                            <div class="page"><img src="assets/menu-4.jpg" alt="" /></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <!--Section Menu ~ End -->
-
-        <!--Section Gallery ~ Start -->
-        <section id="galleria">
-            <h1 class="text-center">Galleria</h1>
-            <hr>
-            <div id="gallery-lightbox" class="row" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                <div class="col-6 col-md-4 col-lg-3 p-0">
-                    <img class="w-100" src="assets/gallery-1.jpg" alt="First slide" data-target="#carouselExample"
-                        data-slide-to="0">
-                </div>
-                <div class="col-6 col-md-4 col-lg-3 p-0">
-                    <img class="w-100" src="assets/gallery-2.jpg" alt="First slide" data-target="#carouselExample"
-                        data-slide-to="1">
-                </div>
-                <div class="col-6 col-md-4 col-lg-3 p-0">
-                    <img class="w-100" src="assets/gallery-3.jpg" alt="First slide" data-target="#carouselExample"
-                        data-slide-to="2">
-                </div>
-                <div class="col-6 col-md-4 col-lg-3 p-0">
-                    <img class="w-100" src="assets/gallery-4.jpg" alt="First slide" data-target="#carouselExample"
-                        data-slide-to="3">
-                </div>
-            </div>
-
-            <div id="gallery-lightbox" class="row" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                <div class="col-6 col-md-4 col-lg-3 p-0">
-                    <img class="w-100" src="assets/gallery-5.jpg" alt="First slide" data-target="#carouselExample"
-                        data-slide-to="0">
-                </div>
-                <div class="col-6 col-md-4 col-lg-3 p-0">
-                    <img class="w-100" src="assets/gallery-6.jpg" alt="First slide" data-target="#carouselExample"
-                        data-slide-to="1">
-                </div>
-                <div class="col-6 col-md-4 col-lg-3 p-0">
-                    <img class="w-100" src="assets/gallery-7.jpg" alt="First slide" data-target="#carouselExample"
-                        data-slide-to="2">
-                </div>
-                <div class="col-6 col-md-4 col-lg-3 p-0">
-                    <img class="w-100" src="assets/one.jpg" alt="First slide" data-target="#carouselExample"
-                        data-slide-to="3">
-                </div>
-            </div>
-            <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
-                <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content bg-transparent">
-                        <div class="modal-body p-0">
-                            <div id="carouselExample" class="carousel slide carousel-fade" data-bs-ride="false">
-                                <div class="carousel-item active">
-                                    <img class="d-block w-100" src="assets/gallery-1.jpg" alt="First slide">
-
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100"
-                                        src="https://images.unsplash.com/photo-1546534505-d534e27ecb35?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-                                        alt="Second slide">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100"
-                                        src="https://images.unsplash.com/photo-1546111380-cfca9a43dd85?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-                                        alt="Third slide">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100"
-                                        src="https://images.unsplash.com/photo-1547288242-f3d375fc7b5f?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-                                        alt="Fourth slide">
-                                </div>
-                            </div>
-                            <a class="carousel-control-prev" href="#carouselExample" role="button" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExample" role="button" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-
-
-
-        </section>
-        <!--Section Gallery ~ End -->
-
-
-        <!-- Section Kontakti ~ Start -->
-        <section id="kontakti">
-            <h1 class="text-center">Kontakti</h1>
-            <hr>
-            <div class="col-lg-12 col-md-12 ">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d384.890654172114!2d20.833735144583358!3d42.35129053850045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13539b3eaf1a63e5%3A0x288c1ad5faefb1f9!2sRestaurant%20Nori%20Suharek%C3%AB!5e1!3m2!1sen!2s!4v1658774552307!5m2!1sen!2s"
-                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade" class="rounded-2"></iframe>
-            </div>
-            <br>
-            <div class="form-box">
-                <form action="https://formsubmit.co/egjini17@gmail.com" method="POST"
-                    class="row row-cols-md-auto g-5 align-items-center">
-                    <div class="col-md-4">
-                        <label for="inlineFormInputGroupUsername">Emri</label>
-                        <div class="input-group">
-                            <div class="input-group-text"><i class="fa-solid fa-user"></i></div>
-                            <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="">
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <label for="inlineFormInputGroupEmail">Email</label>
-                        <div class="input-group">
-                            <div class="input-group-text"><i class="fa-solid fa-envelope"></i></div>
-                            <input type="text" class="form-control" id="inlineFormInputGroupEmail" placeholder="">
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <label for="inlineFormInputGroupPhone">Nr. i telefonit</label>
-                        <div class="input-group">
-                            <div class="input-group-text"><i class="fa-solid fa-phone"></i></div>
-                            <input type="text" class="form-control" id="inlineFormInputGroupPhone" placeholder="">
-                        </div>
-                    </div>
-
-                    <br>
-                    <div class="col-md-12">
-                        <div class="form-floating">
-                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
-                                style="height: 200px;width:100%; resize: none;"></textarea>
-                            <label for="floatingTextarea2">Mesazh</label>
-                        </div>
-                    </div>
-                    <div class="col-md-12 text-center">
-                        <button type="submit" class="btn btn-dark w-25">Submit</button>
-                    </div>
-                </form>
-            </div>
-        </section>
-        <!-- Section Kontakti ~ End -->
-
     </div>
-    <!-- Footer ~ Start -->
-    <footer class="bg-dark text-center text-white">
-        <!-- Grid container -->
-        <div class="container">
-            <!-- Section: Social media -->
-            <section class="mt-3 mb-3">
-                <!-- Facebook -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                        class="fab fa-facebook-f"></i></a>
 
-                <!-- Twitter -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                        class="fab fa-twitter"></i></a>
-
-                <!-- Google -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                        class="fab fa-google"></i></a>
-
-                <!-- Instagram -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                        class="fab fa-instagram"></i></a>
-
-                <!-- Linkedin -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                        class="fab fa-linkedin-in"></i></a>
-
-                <!-- Github -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                        class="fab fa-github"></i></a>
-            </section>
-            <!-- Section: Social media -->
-        </div>
-        <!-- Grid container -->
-
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 2020 Copyright:
-            <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-        </div>
-        <!-- Copyright -->
-    </footer>
-    <!-- Footer ~ End -->
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-        crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
     <script>
-        var pages = document.getElementsByClassName('page');
+        var pages = document.getElementsByClassName("page");
         for (var i = 0; i < pages.length; i++) {
             var page = pages[i];
             if (i % 2 === 0) {
-                page.style.zIndex = (pages.length - i);
+                page.style.zIndex = pages.length - i;
             }
         }
 
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener("DOMContentLoaded", function () {
             for (var i = 0; i < pages.length; i++) {
                 //Or var page = pages[i];
                 pages[i].pageNum = i + 1;
                 pages[i].onclick = function () {
                     if (this.pageNum % 2 === 0) {
-                        this.classList.remove('flipped');
-                        this.previousElementSibling.classList.remove('flipped');
+                        this.classList.remove("flipped");
+                        this.previousElementSibling.classList.remove("flipped");
+                    } else {
+                        this.classList.add("flipped");
+                        this.nextElementSibling.classList.add("flipped");
                     }
-                    else {
-                        this.classList.add('flipped');
-                        this.nextElementSibling.classList.add('flipped');
-                    }
+                };
+            }
+        });
+    </script>
+
+    <script src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script>
+
+    <script>
+        var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        // Change the icons inside the button based on previous settings
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        var themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function () {
+
+            // toggle icons inside button
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            // if set via local storage previously
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+
+                // if NOT set via local storage previously
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
                 }
             }
-        })
+
+        });
     </script>
 </body>
 

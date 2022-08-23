@@ -61,6 +61,9 @@
     <link rel="icon" type="image/png" href="/assets/restaurant-nori-logo.png" />
 
 
+    <!-- Static icon font -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
 </head>
 
@@ -73,15 +76,17 @@
                 <img src="/assets/restaurant-nori-logo.png" alt="Flowbite Logo" width="64px" />
             </a>
             <div class="flex md:order-2">
-                <button type="button"
-                    class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 shadow-md">
+                <a type="button"
+                    class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 hover:cursor-pointer focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 shadow-md"
+                    href="https://www.facebook.com/norirestaurant.suhareke/" target="_blank">
                     <i class="fa-brands fa-facebook-f"></i>
-                </button>
+                </a>
 
-                <button type="button"
-                    class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 shadow-md">
+                <a type="button"
+                    class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 hover:cursor-pointer focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 shadow-md"
+                    href="https://www.instagram.com/restaurantnori/" target="_blank">
                     <i class="fa-brands fa-instagram fa-lg"></i>
-                </button>
+                </a>
                 <button id="theme-toggle" type="button"
                     class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 shadow-md">
                     <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
@@ -163,14 +168,14 @@
                 </p>
 
                 <div class="flex flex-wrap gap-4 mt-8 text-center">
-                    <a class="block w-full px-12 py-3 text-sm font-medium text-white rounded shadow bg-rose-600 sm:w-auto active:bg-rose-500 hover:bg-rose-700 focus:outline-none focus:ring"
+                    <a class="block w-full px-12 py-3 text-sm font-medium rounded-lg shadow sm:w-auto focus:outline-none focus:ring bg-[#785E45] text-white hover:bg-[#785E45]/90 dark:text-white"
                         href="/get-started">
-                        Get Started
+                        Shiko më shumë
                     </a>
 
-                    <a class="block w-full px-12 py-3 text-sm font-medium bg-white rounded shadow text-rose-600 sm:w-auto hover:text-rose-700 active:text-rose-500 focus:outline-none focus:ring"
+                    <a class="block w-full px-12 py-3 text-sm font-medium rounded-lg shadow sm:w-auto focus:outline-none focus:ring bg-white text-black hover:bg-white/90 dark:text-black"
                         href="/about">
-                        Learn More
+                        <i class="fa-solid fa-phone"></i> Telefono
                     </a>
                 </div>
             </div>
@@ -179,272 +184,134 @@
 
     <div class="container">
 
-        <section id="#rreth-nesh">
+        <section id="#pjatat-tona-te-famshme">
+            <h1 class="title-of-section text-center">Pjatat tona të famshme</h1>
             <div class="p-8">
-                <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-4 lg:gap-8">
-                    <!-- First Card - Pizza Margarita -->
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 lg:gap-8">
                     <div class="p-4  rounded-md flex items-center justify-center">
-                        <div
-                            class="w-full max-w-sm bg-white rounded-lg shadow-lg border dark:bg-gray-800 dark:border-gray-700">
-                            <a href="#">
-                                <img class="p-8 rounded-t-lg h-64 w-100 object-cover " src="/assets/pizza.webp"
-                                    alt="product image">
-                            </a>
-                            <div class="px-5 pb-5">
-                                <a href="#">
-                                    <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Pizza
-                                        Margarita
-                                    </h5>
-                                </a>
-                                <div class="flex items-center mt-2.5 mb-5">
-                                    <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor"
-                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <title>First star</title>
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor"
-                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <title>Second star</title>
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor"
-                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <title>Third star</title>
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor"
-                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <title>Fourth star</title>
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor"
-                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <title>Fifth star</title>
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <span
-                                        class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">5.0</span>
-                                </div>
-                                <ul class="dark:text-white">
-                                    <li>Salce domatesh | Borzilok</li>
-                                    <li>Djathë | Kaqkavall</li>
-                                    <br>
-                                </ul>
+                        <div class="wrapper">
+                            <div class="card">
+                                <input type="checkbox" id="card1" class="more" aria-hidden="true">
+                                <div class="content">
+                                    <div class="front bg-white rounded-lg border shadow-lg">
+                                        <div class="inner">
+                                            <div class="p-5 text-center">
+                                                <img class="rounded-t-lg w-60 mx-auto" src="/assets/1.png" alt="">
 
-                                <div class="flex justify-between items-center">
+                                                <h5 class="mb-2 text-2xl  text-gray-900 dark:text-white">
+                                                    File Pule</h5>
 
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Second Card - Biftek -->
-                    <div class="p-4  rounded-md flex items-center justify-center">
-                        <div
-                            class="w-full max-w-sm bg-white rounded-lg shadow-lg border dark:bg-gray-800 dark:border-gray-700">
-                            <a href="#">
-                                <img class="p-8 rounded-t-lg h-64 w-100 object-cover mx-auto" src="/assets/biftek.webp"
-                                    alt="product image">
-                            </a>
-                            <div class="px-5 pb-5">
-                                <a href="#">
-                                    <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
-                                        Biftek
-                                    </h5>
-                                </a>
-                                <div class="flex items-center mt-2.5 mb-5">
-                                    <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor"
-                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <title>First star</title>
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor"
-                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <title>Second star</title>
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor"
-                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <title>Third star</title>
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor"
-                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <title>Fourth star</title>
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor"
-                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <title>Fifth star</title>
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <span
-                                        class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">5.0</span>
-                                </div>
-                                <ul class="dark:text-white">
-                                    <li>Nga Skara</li>
-                                    <li>Gjalpë me erëza</li>
-                                    <br>
-                                </ul>
-
-                                <div class="flex justify-between items-center">
-
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Third Card - Shnicell Pule -->
-                    <div class="p-4  rounded-md flex items-center justify-center">
-                        <div
-                            class="w-full max-w-sm bg-white rounded-lg shadow-lg border dark:bg-gray-800 dark:border-gray-700">
-                            <a href="#">
-                                <img class="p-8 rounded-t-lg h-64 w-100 object-cover mx-auto"
-                                    src="/assets/file-pule.webp" alt="product image">
-                            </a>
-                            <div class="px-5 pb-5">
-                                <a href="#">
-                                    <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
-                                        Shnicell Pule
-                                    </h5>
-                                </a>
-                                <div class="flex items-center mt-2.5 mb-5">
-                                    <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor"
-                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <title>First star</title>
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor"
-                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <title>Second star</title>
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor"
-                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <title>Third star</title>
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor"
-                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <title>Fourth star</title>
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor"
-                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <title>Fifth star</title>
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <span
-                                        class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">5.0</span>
-                                </div>
-                                <ul class="dark:text-white">
-                                    <li>File Pule</li>
-                                    <li>Xhem Brusnice</li>
-                                    <br>
-                                </ul>
-
-                                <div class="flex justify-between items-center">
-
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Fourth Card - Roastbeef Steak -->
-                    <div class="p-4  rounded-md flex items-center justify-center">
-                        <div
-                            class="w-full max-w-sm bg-white rounded-lg shadow-lg border dark:bg-gray-800 dark:border-gray-700">
-                            <a href="#">
-                                <img class="p-8 rounded-t-lg h-64 w-100 object-cover mx-auto"
-                                    src="/assets/roastbeef-steak.webp" alt="product image">
-                            </a>
-                            <div class="px-5 pb-5">
-                                <a href="#">
-                                    <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
-                                        Roastbeef Steak
-                                    </h5>
-                                </a>
-                                <div class="flex items-center mt-2.5 mb-5">
-                                    <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor"
-                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <title>First star</title>
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor"
-                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <title>Second star</title>
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor"
-                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <title>Third star</title>
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor"
-                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <title>Fourth star</title>
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <svg aria-hidden="true" class="w-5 h-5 text-yellow-300" fill="currentColor"
-                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <title>Fifth star</title>
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <span
-                                        class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">5.0</span>
-                                </div>
-                                <ul class="dark:text-white">
-                                    <li>Nga Skara</li>
-                                    <li>Gjalpë me erëza</li>
-                                    <br>
-                                </ul>
-
-                                <div class="flex justify-between items-center">
-
-
+                                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Fileto
+                                                    pule, të quajtura nganjëherë fileto të brendshme, janë një prerje
+                                                    specifike e mishit nga biftekët e pulës ose
+                                                    strucit.
+                                                </p>
+                                                <label for="card1"
+                                                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 cursor-pointer"
+                                                    aria-hidden="true">
+                                                    Shiko receten
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="back bg-white rounded-lg border shadow-lg">
+                                        <div class="inner">
+                                            <div class="mb-4  border-gray-200 dark:border-gray-700">
+                                                <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
+                                                    <ul class="flex flex-wrap -mb-px text-sm font-medium text-center"
+                                                        id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+                                                        <li class="mr-2" role="presentation">
+                                                            <button
+                                                                class="inline-block p-4 rounded-t-lg border-b-2 text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500"
+                                                                id="profile-tab" data-tabs-target="#profile"
+                                                                type="button" role="tab" aria-controls="profile"
+                                                                aria-selected="true">Përbërësit</button>
+                                                        </li>
+                                                        <li class="mr-2" role="presentation">
+                                                            <button
+                                                                class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 dark:border-transparent text-gray-500 dark:text-gray-400 border-gray-100 dark:border-gray-700"
+                                                                id="dashboard-tab" data-tabs-target="#dashboard"
+                                                                type="button" role="tab" aria-controls="dashboard"
+                                                                aria-selected="false">Dashboard</button>
+                                                        </li>
+                                                        <li class="mr-2" role="presentation">
+                                                            <button
+                                                                class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 dark:border-transparent text-gray-500 dark:text-gray-400 border-gray-100 dark:border-gray-700"
+                                                                id="settings-tab" data-tabs-target="#settings"
+                                                                type="button" role="tab" aria-controls="settings"
+                                                                aria-selected="false">Settings</button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div id="myTabContent">
+                                                    <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="profile"
+                                                        role="tabpanel" aria-labelledby="profile-tab">
+                                                        <ul>
+                                                            <li id="elementi_1"
+                                                                class="text-sm text-gray-500 dark:text-gray-400"></li>
+                                                            <li id="elementi_2"
+                                                                class="text-sm text-gray-500 dark:text-gray-400"></li>
+                                                            <li id="elementi_3"
+                                                                class="text-sm text-gray-500 dark:text-gray-400"></li>
+                                                            <li id="elementi_4"
+                                                                class="text-sm text-gray-500 dark:text-gray-400"></li>
+                                                            <li id="elementi_5"
+                                                                class="text-sm text-gray-500 dark:text-gray-400"></li>
+                                                            <li id="elementi_6"
+                                                                class="text-sm text-gray-500 dark:text-gray-400"></li>
+                                                            <li id="elementi_7"
+                                                                class="text-sm text-gray-500 dark:text-gray-400"></li>
+                                                            <li id="elementi_8"
+                                                                class="text-sm text-gray-500 dark:text-gray-400"></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800"
+                                                        id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                                                        <ul>
+                                                            <li id="instruksioni_1"
+                                                                class="text-sm text-gray-500 dark:text-gray-400"></li>
+                                                            <li id="pershkrimi_i_instruksionit_1"
+                                                                class="text-sm text-gray-500 dark:text-gray-400"></li>
+                                                            <hr>
+                                                            <li id="instruksioni_2"
+                                                                class="text-sm text-gray-500 dark:text-gray-400"></li>
+                                                            <li id="pershkrimi_i_instruksionit_2"
+                                                                class="text-sm text-gray-500 dark:text-gray-400"></li>
+                                                            <hr>
+                                                            <li id="instruksioni_3"
+                                                                class="text-sm text-gray-500 dark:text-gray-400"></li>
+                                                            <li id="pershkrimi_i_instruksionit_3"
+                                                                class="text-sm text-gray-500 dark:text-gray-400"></li>
+                                                            <hr>
+                                                            <li id="instruksioni_4"
+                                                                class="text-sm text-gray-500 dark:text-gray-400"></li>
+                                                            <li id="pershkrimi_i_instruksionit_4"
+                                                                class="text-sm text-gray-500 dark:text-gray-400"></li>
+                                                            <hr>
+                                                            <li id="instruksioni_5"
+                                                                class="text-sm text-gray-500 dark:text-gray-400"></li>
+                                                            <li id="pershkrimi_i_instruksionit_5"
+                                                                class="text-sm text-gray-500 dark:text-gray-400"></li>
+                                                            <hr>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800"
+                                                        id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                                                        <p class="text-sm text-gray-500 dark:text-gray-400">This is some
+                                                            placeholder content the <strong
+                                                                class="font-medium text-gray-800 dark:text-white">Settings
+                                                                tab's associated content</strong>. Clicking
+                                                            another tab will toggle the visibility of this one for the
+                                                            next. The tab JavaScript swaps classes to control
+                                                            the content visibility and styling.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <label for="card1" class="button return" aria-hidden="true">
+                                                <i class="fas fa-arrow-left"></i>
+                                            </label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -452,8 +319,139 @@
 
 
 
+                    <div class="p-4  rounded-md flex items-center justify-center">
+                        <div class="wrapper">
+                            <div class="card">
+                                <input type="checkbox" id="card2" class="more" aria-hidden="true">
+                                <div class="content">
+                                    <div class="front bg-white rounded-lg border shadow-lg">
+                                        <div class="inner">
+                                            <div class="p-5 text-center">
+                                                <img class="rounded-t-lg w-60 mx-auto" src="/assets/1.png" alt="">
+
+                                                <h5 class="mb-2 text-2xl  text-gray-900 dark:text-white">
+                                                    File Pule</h5>
+
+                                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Fileto
+                                                    pule, të quajtura nganjëherë fileto të brendshme, janë një prerje
+                                                    specifike e mishit nga biftekët e pulës ose
+                                                    strucit.
+                                                </p>
+                                                <label for="card2"
+                                                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 cursor-pointer"
+                                                    aria-hidden="true">
+                                                    Shiko receten
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="back bg-white rounded-lg border shadow-lg">
+                                        <div class="inner">
+                                            <div class="mb-4  border-gray-200 dark:border-gray-700">
+                                                <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
+                                                    <ul class="flex flex-wrap -mb-px text-sm font-medium text-center"
+                                                        id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+                                                        <li class="mr-2" role="presentation">
+                                                            <button
+                                                                class="inline-block p-4 rounded-t-lg border-b-2 text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500"
+                                                                id="profile-tab" data-tabs-target="#profile"
+                                                                type="button" role="tab" aria-controls="profile"
+                                                                aria-selected="true">Përbërësit</button>
+                                                        </li>
+                                                        <li class="mr-2" role="presentation">
+                                                            <button
+                                                                class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 dark:border-transparent text-gray-500 dark:text-gray-400 border-gray-100 dark:border-gray-700"
+                                                                id="dashboard-tab" data-tabs-target="#dashboard"
+                                                                type="button" role="tab" aria-controls="dashboard"
+                                                                aria-selected="false">Dashboard</button>
+                                                        </li>
+                                                        <li class="mr-2" role="presentation">
+                                                            <button
+                                                                class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 dark:border-transparent text-gray-500 dark:text-gray-400 border-gray-100 dark:border-gray-700"
+                                                                id="settings-tab" data-tabs-target="#settings"
+                                                                type="button" role="tab" aria-controls="settings"
+                                                                aria-selected="false">Settings</button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div id="myTabContent">
+                                                    <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="profile"
+                                                        role="tabpanel" aria-labelledby="profile-tab">
+                                                        <ul>
+                                                            <li id="elementi_1"
+                                                                class="text-sm text-gray-500 dark:text-gray-400"></li>
+                                                            <li id="elementi_2"
+                                                                class="text-sm text-gray-500 dark:text-gray-400"></li>
+                                                            <li id="elementi_3"
+                                                                class="text-sm text-gray-500 dark:text-gray-400"></li>
+                                                            <li id="elementi_4"
+                                                                class="text-sm text-gray-500 dark:text-gray-400"></li>
+                                                            <li id="elementi_5"
+                                                                class="text-sm text-gray-500 dark:text-gray-400"></li>
+                                                            <li id="elementi_6"
+                                                                class="text-sm text-gray-500 dark:text-gray-400"></li>
+                                                            <li id="elementi_7"
+                                                                class="text-sm text-gray-500 dark:text-gray-400"></li>
+                                                            <li id="elementi_8"
+                                                                class="text-sm text-gray-500 dark:text-gray-400"></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800"
+                                                        id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                                                        <ul>
+                                                            <li id="instruksioni_1"
+                                                                class="text-sm text-gray-500 dark:text-gray-400"></li>
+                                                            <li id="pershkrimi_i_instruksionit_1"
+                                                                class="text-sm text-gray-500 dark:text-gray-400"></li>
+                                                            <hr>
+                                                            <li id="instruksioni_2"
+                                                                class="text-sm text-gray-500 dark:text-gray-400"></li>
+                                                            <li id="pershkrimi_i_instruksionit_2"
+                                                                class="text-sm text-gray-500 dark:text-gray-400"></li>
+                                                            <hr>
+                                                            <li id="instruksioni_3"
+                                                                class="text-sm text-gray-500 dark:text-gray-400"></li>
+                                                            <li id="pershkrimi_i_instruksionit_3"
+                                                                class="text-sm text-gray-500 dark:text-gray-400"></li>
+                                                            <hr>
+                                                            <li id="instruksioni_4"
+                                                                class="text-sm text-gray-500 dark:text-gray-400"></li>
+                                                            <li id="pershkrimi_i_instruksionit_4"
+                                                                class="text-sm text-gray-500 dark:text-gray-400"></li>
+                                                            <hr>
+                                                            <li id="instruksioni_5"
+                                                                class="text-sm text-gray-500 dark:text-gray-400"></li>
+                                                            <li id="pershkrimi_i_instruksionit_5"
+                                                                class="text-sm text-gray-500 dark:text-gray-400"></li>
+                                                            <hr>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800"
+                                                        id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                                                        <p class="text-sm text-gray-500 dark:text-gray-400">This is some
+                                                            placeholder content the <strong
+                                                                class="font-medium text-gray-800 dark:text-white">Settings
+                                                                tab's associated content</strong>. Clicking
+                                                            another tab will toggle the visibility of this one for the
+                                                            next. The tab JavaScript swaps classes to control
+                                                            the content visibility and styling.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <label for="card2" class="button return" aria-hidden="true">
+                                                <i class="fas fa-arrow-left"></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
+                    <div class="p-4  rounded-md flex items-center justify-center">
+
+                    </div>
                 </div>
             </div>
         </section>
@@ -539,79 +537,86 @@
             <!--Section Menu ~ End -->
         </div>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
-        <script>
-            var pages = document.getElementsByClassName("page");
-            for (var i = 0; i < pages.length; i++) {
-                var page = pages[i];
-                if (i % 2 === 0) {
-                    page.style.zIndex = pages.length - i;
-                }
-            }
 
-            document.addEventListener("DOMContentLoaded", function () {
-                for (var i = 0; i < pages.length; i++) {
-                    //Or var page = pages[i];
-                    pages[i].pageNum = i + 1;
-                    pages[i].onclick = function () {
-                        if (this.pageNum % 2 === 0) {
-                            this.classList.remove("flipped");
-                            this.previousElementSibling.classList.remove("flipped");
-                        } else {
-                            this.classList.add("flipped");
-                            this.nextElementSibling.classList.add("flipped");
-                        }
-                    };
-                }
-            });
-        </script>
-
-        <script src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script>
-
-        <script>
-            var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
-            var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
-
-            // Change the icons inside the button based on previous settings
-            if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                themeToggleLightIcon.classList.remove('hidden');
-            } else {
-                themeToggleDarkIcon.classList.remove('hidden');
-            }
-
-            var themeToggleBtn = document.getElementById('theme-toggle');
-
-            themeToggleBtn.addEventListener('click', function () {
-
-                // toggle icons inside button
-                themeToggleDarkIcon.classList.toggle('hidden');
-                themeToggleLightIcon.classList.toggle('hidden');
-
-                // if set via local storage previously
-                if (localStorage.getItem('color-theme')) {
-                    if (localStorage.getItem('color-theme') === 'light') {
-                        document.documentElement.classList.add('dark');
-                        localStorage.setItem('color-theme', 'dark');
-                    } else {
-                        document.documentElement.classList.remove('dark');
-                        localStorage.setItem('color-theme', 'light');
-                    }
-
-                    // if NOT set via local storage previously
-                } else {
-                    if (document.documentElement.classList.contains('dark')) {
-                        document.documentElement.classList.remove('dark');
-                        localStorage.setItem('color-theme', 'light');
-                    } else {
-                        document.documentElement.classList.add('dark');
-                        localStorage.setItem('color-theme', 'dark');
-                    }
-                }
-
-            });
-        </script>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+    <script>
+        var pages = document.getElementsByClassName("page");
+        for (var i = 0; i < pages.length; i++) {
+            var page = pages[i];
+            if (i % 2 === 0) {
+                page.style.zIndex = pages.length - i;
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            for (var i = 0; i < pages.length; i++) {
+                //Or var page = pages[i];
+                pages[i].pageNum = i + 1;
+                pages[i].onclick = function () {
+                    if (this.pageNum % 2 === 0) {
+                        this.classList.remove("flipped");
+                        this.previousElementSibling.classList.remove("flipped");
+                    } else {
+                        this.classList.add("flipped");
+                        this.nextElementSibling.classList.add("flipped");
+                    }
+                };
+            }
+        });
+    </script>
+
+    <script src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script>
+
+    <script>
+        var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        // Change the icons inside the button based on previous settings
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        var themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function () {
+
+            // toggle icons inside button
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            // if set via local storage previously
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+
+                // if NOT set via local storage previously
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+
+        });
+    </script>
+    <!-- Using jsDelivr CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- External JavaScript -->
+    <script src="index.js"></script>
+
 
 </body>
 
